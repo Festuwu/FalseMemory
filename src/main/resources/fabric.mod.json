@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "falsememory",
+  "version": "${version}",
+  "name": "False Memory Horror Mod",
+  "description": "A horror mod that plays with your mind.",
+  "authors": [
+    "You"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/falsememory/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.falsememoryhorrormod.FalseMemoryHorrorMod"
+    ],
+    "client": [
+      "com.example.falsememoryhorrormod.FalseMemoryHorrorModClient"
+    ]
+  },
+  "mixins": [
+    "falsememory.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+} 

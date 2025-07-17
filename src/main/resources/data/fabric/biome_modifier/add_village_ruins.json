@@ -1,0 +1,7 @@
+{
+  "type": "fabric:add_feature",
+  "biome_category": "plains",
+  "feature": "falsememory:village_ruins",
+  "step": "underground_decoration",
+  "chance": 0.01
+}

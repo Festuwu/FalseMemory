@@ -1,0 +1,32 @@
+{
+  "distant_footsteps": {
+    "subtitle": "subtitles.falsememory.distant_footsteps",
+    "sounds": [
+      "falsememory:ambient/distant_footsteps"
+    ]
+  },
+  "echoed_mining": {
+    "subtitle": "subtitles.falsememory.echoed_mining",
+    "sounds": [
+      "falsememory:ambient/echoed_mining"
+    ]
+  },
+  "quiet_block_break": {
+    "subtitle": "subtitles.falsememory.quiet_block_break",
+    "sounds": [
+      "falsememory:block/quiet_block_break"
+    ]
+  },
+  "soft_whisper": {
+    "subtitle": "subtitles.falsememory.soft_whisper",
+    "sounds": [
+      "falsememory:ambient/soft_whisper"
+    ]
+  },
+  "typing_sound": {
+    "subtitle": "subtitles.falsememory.typing_sound",
+    "sounds": [
+      "falsememory:ui/typing_sound"
+    ]
+  }
+} 

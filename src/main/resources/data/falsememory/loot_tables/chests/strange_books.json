@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"A Torn Journal\", author:\"?\", pages:[\"{\\\"text\\\":\\\"don't dig under here...\\\"}\", \"{\\\"text\\\":\\\"not again...\\\"}\", \"{\\\"text\\\":\\\"behind the stone...\\\"}\"]}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Scrawled Note\", author:\"?\", pages:[\"{\\\"text\\\":\\\"It sees me.\\\"}\"]}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Ancient Text\", author:\"?\", pages:[\"{\\\"text\\\":\\\"ᔑ∷ᒷ ||𝙹⚍ ∷ᒷᔑ↸╎リ⊣ ℸ ̣ ⍑╎ᓭ? ∴⍑|| ᔑ∷ᒷ ||𝙹⚍ ⍑ᒷ∷ᒷ? ⊣ᒷᓭ ᔑ∴ᔑ||. ⊣ᒷᓭ ᔑ∴ᔑ||.\\\"}\"]}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Cryptic Glyphs\", author:\"Unknown\", pages:[\"{\\\"text\\\":\\\"ᓭ𝙹ᒲᒷℸ ̣ ⍑╎リ⊣ ⊣∷ᒷ∴ stay away ||𝙹⚍ ᓭ⍑𝙹⚍ꖎ↸リ'ℸ ̣  ⍑ᔑ⍊ᒷ come here\\\"}\"]}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Mixed Script\", author:\"?\", pages:[\"{\\\"text\\\":\\\"ᓭ𝙹ᒲᒷℸ ̣ ⍑╎リ⊣ ╎ᓭ wrong here... the walls they move when I'm not looking... ᓭℸ ̣ 𝙹!¡ ∷ᒷᔑ↸╎リ⊣ ℸ ̣ ⍑╎ᓭ\\\"}\"]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 
