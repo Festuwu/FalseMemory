@@ -126,7 +126,6 @@ public class ClientTickHandler implements ClientTickEvents.EndTick {
         MemoryTrickManager.tick(player);
         
         // Mob disappearance system
-        MobDisappearanceManager.tick(world);
         
         // Typing sound for fake multiplayer
         if (RANDOM.nextInt(25000) == 0) {
@@ -209,6 +208,9 @@ public class ClientTickHandler implements ClientTickEvents.EndTick {
                 }
             }
         }
+        
+        // Fake nameplate tick
+        FakeNameplateRenderer.tick(client);
         
     }
 } 
