@@ -8,6 +8,7 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.server.world.ServerWorld;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +29,7 @@ public class MobDisappearanceManager {
         FalseMemoryHorrorMod.LOGGER.info("Next mob disappearance scheduled for: " + nextDisappearanceTime + " ticks");
     }
     
-    public static void tick(World world) {
-        if (world == null || world.isClient) return;
-        
+    public static void tick(ServerWorld world) {
         long currentTime = world.getTime();
         
         if (!isActive) {
@@ -53,13 +52,22 @@ public class MobDisappearanceManager {
         }
     }
     
-    private static void startDisappearance(World world) {
+    private static void startDisappearance(ServerWorld world) {
         hiddenEntities.clear();
-        FalseMemoryHorrorMod.LOGGER.info("Mob disappearance system activated - feature temporarily disabled for stability");
-        // Feature disabled for now due to entity iteration complexity
+        FalseMemoryHorrorMod.LOGGER.info("Starting mob disappearance - hiding entities");
+        for (Entity entity : world.iterateEntities()) {
+            if (shouldHideEntity(entity)) {
+                entity.setInvisible(true);
+                entity.setSilent(true);
+                if (entity instanceof MobEntity mob) {
+                    mob.setAiDisabled(true);
+                }
+                hiddenEntities.add(entity);
+            }
+        }
     }
     
-    private static void endDisappearance(World world) {
+    private static void endDisappearance(ServerWorld world) {
         for (Entity entity : hiddenEntities) {
             if (entity != null && entity.isAlive()) {
                 entity.setInvisible(false);
@@ -74,7 +82,7 @@ public class MobDisappearanceManager {
         hiddenEntities.clear();
     }
     
-    private static boolean shouldHideEntity(Entity entity) {
+    public static boolean shouldHideEntity(Entity entity) {
         return (entity instanceof MobEntity || entity instanceof PassiveEntity) && 
                !(entity instanceof PlayerEntity) &&
                entity.isAlive();
